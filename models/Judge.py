@@ -3,26 +3,26 @@ from models import Services
 
 
 class Judge(Employee):
-    def __init__(self, _full_name: str, _sex: str, _age: int, _services: Services,
-                 _price_of_one_service: int, _years_of_experience: int, _salary: int, skills: list,
-                 __corruptibility: bool, __conducted_proceedings_amount: int, __complaints_amount: int):
-        super().__init__(_full_name, _sex, _age, _services, _price_of_one_service, _years_of_experience, _salary,
+    def __init__(self, full_name: str, sex: str, age: int, services: Services,
+                 price_of_one_service: int, years_of_experience: int, salary: int, skills: list,
+                 corruptibility: bool, conducted_proceedings_amount: int, complaints_amount: int):
+        super().__init__(full_name, sex, age, services, price_of_one_service, years_of_experience, salary,
                          skills)
-        self._full_name = _full_name
-        self._sex = _sex
-        self._age = _age
-        self._services = _services
-        self._price_of_one_service = _price_of_one_service
-        self._years_of_experience = _years_of_experience
-        self._salary = _salary
-        self._skills = skills
-        self.__corruptibility = __corruptibility
-        self.__conducted_proceedings_amount = __conducted_proceedings_amount
-        self.__complaints_amount = __complaints_amount
+        self.full_name = full_name
+        self.sex = sex
+        self.age = age
+        self.services = services
+        self.price_of_one_service = price_of_one_service
+        self.years_of_experience = years_of_experience
+        self.salary = salary
+        self.skills = skills
+        self.corruptibility = corruptibility
+        self.conducted_proceedings_amount = conducted_proceedings_amount
+        self.complaints_amount = complaints_amount
 
     def __str__(self):
-        return f"Full name: {self._full_name}\nSex: {self._sex}\nAge: {self._age}\nServices: {self._services}\n" \
-               f"Price of one service: {self._price_of_one_service}\nYears or experience: {self._years_of_experience}" \
-               f"\nSalary:{self._salary}\n Skills: {self._skills}\nCorruptibility: {self.__corruptibility}\n " \
-               f"Conducted proceedings amount: {self.__conducted_proceedings_amount}\nComplaints amount:" \
-               f" {self.__complaints_amount}"
+        return f"Full name: {self.full_name}\nSex: {self.sex}\nAge: {self.age}\nServices: {self.services}\n" \
+               f"Price of one service: {self.price_of_one_service}\nYears or experience: {self.years_of_experience}" \
+               f"\nSalary:{self.salary}\n Skills: {self.skills}\nCorruptibility: {self.corruptibility}\n " \
+               f"Conducted proceedings amount: {self.conducted_proceedings_amount}\nComplaints amount:" \
+               f" {self.complaints_amount}"

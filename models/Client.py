@@ -1,13 +1,13 @@
-from models import User_class, Services
+from models import Customer, Services
 
 
-class Client (User_class):
-    def __init__(self, _full_name: str, _sex: str, _age: int, _services: Services,
-                 __price_limit: int, __needed_services=list):
-        super().__init__(_full_name, _sex, _age, _services)
-        self.__price_limit = __price_limit
-        self.__needed_services = __needed_services
+class Client(Customer):
+    def __init__(self, full_name: str, sex: str, age: int, services: Services,
+                 price_limit: int, needed_services=list):
+        super().__init__(full_name, sex, age, services)
+        self.price_limit = price_limit
+        self.needed_services = needed_services
 
     def __str__(self):
-        return f"Full name: {self._full_name}\nSex: {self._sex}\nAge: {self._age}\nServices: {self._services}\n\
-        Price limit: {self.__price_limit}\nNeeded services: {self.__needed_services}\n"
+        return f"Full name: {self.full_name}\nSex: {self.sex}\nAge: {self.age}\nServices: {self.services}\n\
+        Price limit: {self.price_limit}\nNeeded services: {self.needed_services}\n"

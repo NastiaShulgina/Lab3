@@ -1,26 +1,25 @@
-from Employee import Employee
-from User import Services
+from models import Employee
+from models import Services
 
 
 class Prosecutor(Employee):
-    def __init__(self, _full_name: str, _sex: str, _age: int, _services: Services,
-                 _price_of_one_service: int, _years_of_experience: int, _salary: int, skills: list,
-                 __corruptibility: bool, __investigation_management: bool):
-        super().__init__(_full_name, _sex, _age, _services, _price_of_one_service, _years_of_experience, _salary,
-                         skills)
-        self._full_name = _full_name
-        self._sex = _sex
-        self._age = _age
-        self._services = _services
-        self._price_of_one_service = _price_of_one_service
-        self._years_of_experience = _years_of_experience
-        self._salary = _salary
-        self._skills = skills
-        self.__corruptibility = __corruptibility
-        self.__investigation_management = __investigation_management
+    def __init__(self, full_name: str, sex: str, age: int, services: Services,
+                 price_of_one_service: int, years_of_experience: int, salary: int, skills: list,
+                 corruptibility: bool, investigation_management: bool):
+        super().__init__(full_name, sex, age, services, price_of_one_service, years_of_experience, salary, skills)
+        self.full_name = full_name
+        self.sex = sex
+        self.age = age
+        self.services = services
+        self.price_of_one_service = price_of_one_service
+        self.years_of_experience = years_of_experience
+        self.salary = salary
+        self.skills = skills
+        self.corruptibility = corruptibility
+        self.investigation_management = investigation_management
 
     def __str__(self):
-        return f"Full name: {self._full_name}\nSex: {self._sex}\nAge: {self._age}\nServices: {self._services}\n" \
-               f"Price of one service: {self._price_of_one_service}\nYears or experience: {self._years_of_experience}" \
-               f"\nSalary: {self._salary}\nSkills: {self._skills}\nCorruptibility: {self.__corruptibility}\n" \
-               f"Investigation management: {self.__investigation_management}"
+        return f"Full name: {self.full_name}\nSex: {self.sex}\nAge: {self.age}\nServices: {self.services}\n" \
+               f"Price of one service: {self.price_of_one_service}\nYears or experience: {self.years_of_experience}" \
+               f"\nSalary: {self.salary}\nSkills: {self.skills}\nCorruptibility: {self.corruptibility}\n" \
+               f"Investigation management: {self.investigation_management}"
